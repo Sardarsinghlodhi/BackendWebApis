@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace BackendWebApis.Controllers.Account.Sign_up
 {
-    [Route("api/signup")]
+    [Route("api/[controller]")]
     [ApiController]
     public class SignUpApiController : ControllerBase
     {
@@ -13,7 +13,7 @@ namespace BackendWebApis.Controllers.Account.Sign_up
         /// </summary>
         /// <param name="model"></param>
         /// <returns></returns>
-        [HttpPost]
+        [HttpPost("signup")]
         public ActionResult Signup(SignUp model)
         {
             return Ok(new {data = model, Message = "Signed up successfully."});
